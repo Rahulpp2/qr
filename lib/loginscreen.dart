@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loginp/qr.dart';
+import 'package:loginp/regscreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -46,9 +48,21 @@ class _LoginScreenState extends State<LoginScreen> {
                     )),
                   ),
                       SizedBox(height: 30),
-                      TextButton(onPressed: (){},
+                      TextButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const qr()),
+                        );
+                      },
                       style: TextButton.styleFrom(backgroundColor: Colors.red),
-                          child: Text('Login',style: TextStyle(color: Colors.white60,fontSize: 20),),)
+                          child: Text('Login',style: TextStyle(color: Colors.white60,fontSize: 20),),),
+                      SizedBox(height: 30),
+                      TextButton(onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => const regiscrn()),
+                        );
+                      },
+                        style: TextButton.styleFrom(backgroundColor: Colors.red),
+                        child: Text('Not login?',style: TextStyle(color: Colors.white60,fontSize: 20),),)
                 ]))));
   }
 }
