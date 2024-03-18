@@ -25,7 +25,7 @@ class _regiscrnState extends State<regiscrn> {
   bool loading=false;
 
   Future<void> regiscrn() async {
-    Uri uri = Uri.parse('url');
+    Uri uri = Uri.parse('https://scnner-web.onrender.com/api/register');
     var response = await http.post(uri,
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8'
